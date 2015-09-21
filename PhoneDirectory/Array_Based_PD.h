@@ -55,23 +55,30 @@ public:
 private:
 	class Directory_Entry /* Exercise 1.6: Please complete the definition of the Directory_Entry class here. - Ed/Kent */
 	{
-	public:
-		
-			Directory_Entry() {} // Default no-argument constructor
-		Directory_Entry(std::string the_name, std::string the_number) {//from direction on blackboard 
-			// constructor not implemented yet
+	public: // from direction on blackboard - Noelle
+			//implementation (pt 5) by Kay
+			Directory_Entry() 
+			{
+				name = "John Smith";
+				number = "(509) 867-5309";
+			} // Default no-argument constructor
+		Directory_Entry(std::string the_name, std::string the_number) {
+			name = the_name;
+			number = the_number;
 		}
 		std::string get_name() const {
-			return ""; // method not implemented yet
+			return name;
 		}
 		std::string get_number() const {
-			return ""; // method not implemented yet
+			return number;
 		}
 		void set_number(const std::string& new_number) {
-			// method not implemented yet
+			number = new_number;
 		}
 	
 	private:
+		string name;
+		string number;
 
 	};
 
